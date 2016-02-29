@@ -45,7 +45,7 @@
             var tdy = new Date(),
                 d = '1' + tdy.getDate(),
                 m = '1' + tdy.getMonth() + 1,
-                y = '1' + tdy.getFullYear().substring(2);
+                y = '1' + tdy.getFullYear().toString().substring(2);
                 
             document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         }
