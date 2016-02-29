@@ -6,7 +6,8 @@
     <meta name="author" content="Stephan Weinhold">
     <meta name="description" content="codelover, projectmanagement, oneManScrumTeam, musician, wunderkind - agile web-everything">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Gloria+Hallelujah' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]><script src="https://raw.githubusercontent.com/iandevlin/html5bones/master/js/html5shiv-printshiv.js" media="all"></script><![endif]-->
     
     <style type="text/css">
@@ -14,16 +15,16 @@
         
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Indie+Flower|Candal|Lobster|Pacifico');
         
-        header[role=banner] {
-            background-color: rgb(220, 220, 220);
-            border-top: 10px solid;
-            text-align: center;
+        body, html {
+            font-family: 'Open Sans', sans-serif;
         }
         
-        header[role=banner] strong {
-            font-size: 250%;
-            transform: translateY(-50%);
-            top: 50%;
+        header[role=banner] {
+            border-top: 10px solid;
+        }
+        
+        h1 {
+            font-family: 'Gloria Hallelujah', cursive;
         }
         
         #social-links li {
@@ -42,117 +43,96 @@
             padding: 5px;
         }
         
-        #soc_linkedin {
-            background-color: rgb(0, 119, 181);
-        }
-        
-        #soc_xing {
-            background-color: rgb(2, 100, 102);
-        }
-        
-        #soc_twitter {
-            background-color: rgb(85, 172, 238);
-        }
-        
-        #soc_stackoverflow {
-            background-color: rgb(254, 122, 21);
-        }
-        
-        #soc_github {
-            background-color: rgb(65, 131, 196);
-        }
-        
-        #soc_instagram {
-            background-color: rgb(63, 114, 155);
-        }
-        
-        #soc_pinterest {
-            background-color: rgb(189, 8, 28);
-        }
-        
-        #soc_pmi {
-            background-color: rgb(0, 122, 194);
-        }
+        #soc_linkedin { background-color: rgb(0, 119, 181); }
+        #soc_xing { background-color: rgb(2, 100, 102); }
+        #soc_twitter { background-color: rgb(85, 172, 238); }
+        #soc_stackoverflow { background-color: rgb(254, 122, 21); }
+        #soc_github { background-color: rgb(65, 131, 196); }
+        #soc_instagram { background-color: rgb(63, 114, 155); }
+        #soc_pinterest { background-color: rgb(189, 8, 28); }
+        #soc_pmi { background-color: rgb(0, 122, 194); }
         
         #social-links a:hover {
             transform: scale(1.1);
         }
         
         footer[role=contentinfo] {
-            border-top: 1px solid;
-            clear: both;
+            bottom: 0;
             padding: 20px 10px;
+            position: fixed;
         }
     </style>
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Person">
     <header id="header" role="banner">
-        <strong>be bold</strong>
+        <img itemprop="image" src="me.jpg" alt="Stephan Weinhold">
     </header>
     
     <div class="wrap">
         <main role="main">
             <p>
-                <strong>Stephan Weinhold</strong>
+                <strong>I am</strong>
                 <br>
-                Riedenburg, Salzburg, Austria
+                <h1>Stephan Weinhold</h1>
+                <br>
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Riedenburg, Salzburg, Austria</span>
                 <br>
                 codelover, digital project manager, marketing, one-man-scrum-team, musician, wunderkind &dash; agile web-everything.
             </p>
-            
-            <ul id="social-links">
-                <li>
-                    <a id="soc_linkedin" href="https://www.linkedin.com/in/stephanweinhold" title="LinkedIn" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                </li>
-    
-                <li>
-                    <a id="soc_xing" href="https://www.xing.com/profile/Stephan_Weinhold" title="Xing" target="_blank">
-                        <i class="fa fa-xing"></i>
-                    </a>
-                </li>
-    
-                <li>
-                    <a id="soc_twitter" href="https://twitter.com/TheAgileNinja" title="Twitter" target="_blank">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-    
-                <li>
-                    <a id="soc_stackoverflow" href="http://stackoverflow.com/users/3218828/stephan-weinhold" title="stackoverflow" target="_blank">
-                        <i class="fa fa-stack-overflow"></i>
-                    </a>
-                </li>
-    
-                <li>
-                    <a id="soc_github" href="https://github.com/StephanWeinhold" title="GitHub" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </li>
-    
-                <li>
-                    <a id="soc_instagram" href="https://www.instagram.com/stephanweinhold/" title="Instagram" target="_blank">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </li>
-    
-                <li>
-                    <a id="soc_pinterest" href="https://www.pinterest.com/stephanweinhold/" title="Pinterest" target="_blank">
-                        <i class="fa fa-pinterest"></i>
-                    </a>
-                </li>
-    
-                <li>
-                    <a id="soc_pmi" href="http://www.pmi.org" title="Project Management Institute" target="_blank">
-                        <i class="fa fa-globe"></i>
-                    </a>
-                </li>
-            </ul>
         </main>
     </div>
     
     <footer id="footer" role="contentinfo">
+        <ul id="social-links">
+            <li>
+                <a id="soc_linkedin" href="https://www.linkedin.com/in/stephanweinhold" title="LinkedIn" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
+
+            <li>
+                <a id="soc_xing" href="https://www.xing.com/profile/Stephan_Weinhold" title="Xing" target="_blank">
+                    <i class="fa fa-xing"></i>
+                </a>
+            </li>
+
+            <li>
+                <a id="soc_twitter" href="https://twitter.com/TheAgileNinja" title="Twitter" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+
+            <li>
+                <a id="soc_stackoverflow" href="http://stackoverflow.com/users/3218828/stephan-weinhold" title="stackoverflow" target="_blank">
+                    <i class="fa fa-stack-overflow"></i>
+                </a>
+            </li>
+
+            <li>
+                <a id="soc_github" href="https://github.com/StephanWeinhold" title="GitHub" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </li>
+
+            <li>
+                <a id="soc_instagram" href="https://www.instagram.com/stephanweinhold/" title="Instagram" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </li>
+
+            <li>
+                <a id="soc_pinterest" href="https://www.pinterest.com/stephanweinhold/" title="Pinterest" target="_blank">
+                    <i class="fa fa-pinterest"></i>
+                </a>
+            </li>
+
+            <li>
+                <a id="soc_pmi" href="http://www.pmi.org" title="Project Management Institute" target="_blank">
+                    <i class="fa fa-globe"></i>
+                </a>
+            </li>
+        </ul>
+            
         <small>This website has been made on my mobile phone with tons of heart, lots of CSS, some HTML, little JS and no designing involved.
         </small>
         <br>
@@ -176,17 +156,9 @@
             document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
             document.getElementById('footer').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         }
-        
-        var getRandomGoogleFont = function() {
-            var fnts = ['Open Sans', 'Indie Flower', 'Candal', 'Lobster', 'Pacifico'],
-                rndm = Math.floor(Math.random() * fnts.length);
-                
-            document.getElementById('header').style.fontFamily = fnts[rndm] + ', sans-serif';
-        }
     
         document.addEventListener('DOMContentLoaded', function() {
             colorHeader();
-            getRandomGoogleFont();
         }, false);
         
         (function(s,t,e,p,h,a,n){s['GoogleAnalyticsObject']=h;s[h]=s[h]||function(){
