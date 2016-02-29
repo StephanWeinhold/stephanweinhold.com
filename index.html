@@ -77,6 +77,12 @@
         #social-links a:hover {
             transform: scale(1.1);
         }
+        
+        footer[role=contentinfo] {
+            border-top: 1px solid;
+            clear: both;
+            padding: 20px 10px;
+        }
     </style>
 </head>
 <body>
@@ -138,8 +144,13 @@
         </main>
     </div>
     
-    <footer role="contentinfo">
-        <small>This website has been made via mobile phone only - <time datetime="2016">2016</time></small>
+    <footer id="footer" role="contentinfo">
+        <small>This website has been made on my mobile phone only with tons of heart, lots of CSS, some HTML, little JS and no designing involved. - <time datetime="2016">2016</time></small>
+        <br>
+        <small>Based on 
+            <a href="https://github.com/StephanWeinhold/vanilla-fe">vanilla-fe</a> and
+            <a href="https://html5bones.com/">HTML5 Bones</a>.
+        </small>
     </footer>
     
     <script type="text/javascript">
@@ -150,6 +161,7 @@
                 y = '1' + tdy.getFullYear().toString().substring(2);
                 
             document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
+            document.getElementById('footer').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         }
         
         var getRandomGoogleFont = function() {
