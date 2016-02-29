@@ -166,19 +166,18 @@
     </footer>
     
     <script type="text/javascript">
-        var colorHeader = function() {
+        var colorByDate = function() {
             var tdy = new Date(),
                 d = '1' + tdy.getDate(),
                 m = '1' + tdy.getMonth() + 1,
                 y = '1' + tdy.getFullYear().toString().substring(2);
                 
             document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
-            document.getElementById('footer').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
             document.getElementById('me').style.color = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         }
     
         document.addEventListener('DOMContentLoaded', function() {
-            colorHeader();
+            colorByDate();
         }, false);
         
         (function(s,t,e,p,h,a,n){s['GoogleAnalyticsObject']=h;s[h]=s[h]||function(){
