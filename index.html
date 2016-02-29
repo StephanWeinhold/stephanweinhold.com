@@ -37,6 +37,7 @@
         
         h1 {
             font-family: 'Gloria Hallelujah', cursive;
+            font-size: 200%;
             margin: 0;
             padding: 0;
         }
@@ -86,7 +87,7 @@
         <main role="main">
             <strong>I am</strong>
             <br>
-            <h1>Stephan Weinhold</h1>
+            <h1 id="me">Stephan Weinhold</h1>
             <br>
             <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Riedenburg, Salzburg, Austria</span>
             <br>
@@ -167,6 +168,7 @@
                 
             document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
             document.getElementById('footer').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
+            document.getElementById('me').style.color = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         }
     
         document.addEventListener('DOMContentLoaded', function() {
