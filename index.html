@@ -23,6 +23,58 @@
             transform: translateY(-50%);
             top: 50%;
         }
+        
+        #social-links li {
+            float: left;
+            list-style: none;
+            margin-right: 12px;
+        }
+        
+        #social-links li:last-child {
+            margin-right: 0;
+        }
+        
+        #social-links a {
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            padding: 5px;
+        }
+        
+        #soc_linkedin {
+            background-color: rgb(0, 119, 181);
+        }
+        
+        #soc_xing {
+            background-color: rgb(2, 100, 102);
+        }
+        
+        #soc_twitter {
+            background-color: rgb(85, 172, 238);
+        }
+        
+        #soc_stackoverflow {
+            background-color: rgb(254, 122, 21);
+        }
+        
+        #soc_github {
+            background-color: rgb(65, 131, 196);
+        }
+        
+        #soc_instagram {
+            background-color: rgb(63, 114, 155);
+        }
+        
+        #soc_pinterest {
+            background-color: rgb(189, 8, 28);
+        }
+        
+        #soc_pmi {
+            background-color: rgb(0, 122, 194);
+        }
+        
+        #social-links a:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -32,7 +84,55 @@
     
     <div class="wrap">
         <main role="main">
-        
+            <ul id="social-links">
+                <li>
+                    <a id="soc_linkedin" href="https://www.linkedin.com/in/stephanweinhold" title="LinkedIn" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+    
+                <li>
+                    <a id="soc_xing" href="https://www.xing.com/profile/Stephan_Weinhold" title="Xing" target="_blank">
+                        <i class="fa fa-xing"></i>
+                    </a>
+                </li>
+    
+                <li>
+                    <a id="soc_twitter" href="https://twitter.com/TheAgileNinja" title="Twitter" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+    
+                <li>
+                    <a id="soc_stackoverflow" href="http://stackoverflow.com/users/3218828/stephan-weinhold" title="stackoverflow" target="_blank">
+                        <i class="fa fa-stack-overflow"></i>
+                    </a>
+                </li>
+    
+                <li>
+                    <a id="soc_github" href="https://github.com/StephanWeinhold" title="GitHub" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+    
+                <li>
+                    <a id="soc_instagram" href="https://www.instagram.com/stephanweinhold/" title="Instagram" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+    
+                <li>
+                    <a id="soc_pinterest" href="https://www.pinterest.com/stephanweinhold/" title="Pinterest" target="_blank">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                </li>
+    
+                <li>
+                    <a id="soc_pmi" href="http://www.pmi.org" title="Project Management Institute" target="_blank">
+                        <i class="fa fa-globe"></i>
+                    </a>
+                </li>
+            </ul>
         </main>
     </div>
     
