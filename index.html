@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">  
     <title>Stephan Weinhold</title>
+    <meta name="author" content="Stephan Weinhold">
     <meta name="description" content="codelover, projectmanagement, oneManScrumTeam, musician, wunderkind - agile web-everything">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
@@ -11,10 +12,22 @@
     <style type="text/css">
         /*! normalize.css v3.0.2 | MIT License | git.io/normalize */img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}
         
+        header[role=banner] {
+            background-color: rgb(220, 220, 220);
+            border-top: 5px solid;
+            text-align: center;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+        
+        header[role=banner] strong {
+            font-size: 250%;
+        }
     </style>
 </head>
 <body>
-    <header role="banner">
+    <header id="header" role="banner">
+        <strong>be bold</strong>
     </header>
     
     <div class="wrap">
@@ -24,8 +37,30 @@
     </div>
     
     <footer role="contentinfo">
-        <small><time datetime="2016">2016</time></small>
+        <small>This website has been made via mobile phone only - <time datetime="2016">2016</time></small>
     </footer>
     
+    <script type="text/javascript">
+        var colorHeader = function() {
+            var tdy = new Date(),
+                d = '1' + tdy.getDate(),
+                m = '1' + tdy.getMonth() + 1,
+                y = '1' + tdy.getFullYear().substring(2);
+                
+            document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
+        }
+        
+        var getRandomGoogleFont = function() {
+            var fnts = ['Questrial', 'Rambla', 'Source Sans Pro', 'Rajdhani', 'Dosis', 'Abel', 'Ubuntu Mono', 'Crafty Girls', 'Noto Sans', 'Droid Sans', 'Permanent Marker', 'Lato', 'Arvo', 'Cabin', 'Playfair Display', 'News Cycle', 'Lora', 'PT Sans', 'Poiret One', 'Armata', 'PT Sans Narrow', 'Ropa Sans', 'Cabin Condensed', 'Philosopher', 'Istok Web', 'Arimo', 'Quicksand', 'Paytone One', 'Noto Serif', 'Ubuntu', 'Gudea', 'Droid Sans Mono', 'Josefin Sans', 'Bitter', 'PT Serif', 'Lobster', 'Kreon', 'Monda', 'Anton', 'Crete Round', 'Shadows Into Light', 'Rokkitt', 'Josefin Slab', 'Libre Baskerville', 'Source Code Pro', 'Gloria Hallelujah', 'Exo', 'Asap', 'Cantarell', 'Muli', 'Ubuntu Condensed', 'Droid Serif', 'Varela Round', 'Squada One', 'Archivo Narrow', 'Play', 'Pontano Sans', 'Crimson Text', 'Pacifico', 'Titillium Web', 'Amatic SC', 'Roboto', 'Merriweather Sans', 'Hammersmith One', 'PT Sans Caption', 'Pathway Gothic One', 'Indie Flower', 'Old Standard TT', 'Merriweather', 'Francois One', 'Quattrocento Sans', 'Oswald', 'Raleway', 'Playball', 'Cuprum', 'Signika', 'Noticia Text', 'Alegreya', 'Fjalla One', 'Montserrat', 'Nobile', 'Chewy', 'Nunito', 'Slabo 13px', 'Righteous', 'Karla', 'Coming Soon', 'Courgette', 'Changa One', 'Inconsolata', 'Slabo 27px', 'Vollkorn', 'Exo 2', 'Roboto Condensed', 'Maven Pro', 'Orbitron', 'Open Sans Condensed:300', 'Patua One', 'Roboto Slab', 'Bree Serif', 'Yanone Kaffeesatz', 'Dancing Script', 'Oxygen', 'Open Sans'],
+                rndm = Math.floor(Math.random() * fnts.length);
+                
+            document.getElementById('header').css('font-family', fnts[rndm] +', sans-serif');
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            colorHeader();
+            getRandomGoogleFont();
+        }, false);
+    </script>
 </body>
 </html>
