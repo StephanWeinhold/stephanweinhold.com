@@ -48,7 +48,7 @@
             padding: 0;
         }
         
-        @media only screen  and (min-width: 800px) {
+        @media only screen  and (min-width: 600px) {
             h1 {
                 font-size: 400%;
             }
@@ -82,7 +82,7 @@
             padding: 3px 6px;
         }
         
-        @media only screen  and (min-width: 800px) {
+        @media only screen  and (min-width: 600px) {
             footer[role=contentinfo] {
                 position: fixed;
             }
@@ -120,7 +120,7 @@
         <img src="me.png" alt="Digital manager with more than 15 years experience in leading and evolving teams, a fondness for web technologies and no awe to dirty his hands. Keen problem-hunter and seasoned solutioneer.">
     </header>
     
-    <div class="wrap">
+    <div id="wrap">
         <main role="main">
             <strong>Hi, I am</strong>
             <h1 id="me">
@@ -167,9 +167,29 @@
             document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
             document.getElementById('me').style.color = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         }
+        
+        var getViewportHeight = function() {
+            var wndw = window,
+                dcmnt = document,
+                elmnt = dcmnt.documentElement,
+                bdy = dcmnt.getElementsByTagName('body')[0],
+                hght = wndw.innerHeight|| elmnt.clientHeight|| bdy.clientHeight,
+                wdth = wndw.innerWidth || elmnt.clientWidth || bdy.clientWidth,
+                vwprt = {
+                    'width': wdth,
+                    'height': hght
+                };
+            
+            return vwprt;
+        }
     
         document.addEventListener('DOMContentLoaded', function() {
             colorByDate();
+            
+            var vprt = getViewportHeight();
+            if (vprt.width < 600) {
+                document.getElementById('wrap').style.height = vprt.height;
+            }
         }, false);
         
         (function(s,t,e,p,h,a,n){s['GoogleAnalyticsObject']=h;s[h]=s[h]||function(){
