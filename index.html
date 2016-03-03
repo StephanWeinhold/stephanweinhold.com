@@ -216,9 +216,10 @@
         window.onload = function() {
             colorByDate();
             
-            var vwprt = getViewportSize();
+            var vwprt = getViewportSize(),
+                mnHght = vwprt.height - document.getElementById('header').height;
             if (vwprt.width < 600) {
-                document.getElementById('wrap').style.height = vwprt.height + 'px';
+                document.getElementById('wrap').style.height = mnHght + 'px';
             }
         };
         
