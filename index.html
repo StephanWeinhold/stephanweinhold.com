@@ -168,7 +168,7 @@
             document.getElementById('me').style.color = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         }
         
-        var getViewportHeight = function() {
+        var getViewportSize = function() {
             var wndw = window,
                 dcmnt = document,
                 elmnt = dcmnt.documentElement,
@@ -186,8 +186,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             colorByDate();
             
-            var vprt = getViewportHeight();
+            var vprt = getViewportSize();
+            console.log(vwprt);
             if (vprt.width < 600) {
+                console.log(vprt.width);
+                console.log(vprt.height);
                 document.getElementById('wrap').style.height = vprt.height;
             }
         }, false);
