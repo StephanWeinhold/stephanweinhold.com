@@ -186,12 +186,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             colorByDate();
             
-            var vprt = getViewportSize();
+            var vwprt = getViewportSize();
             console.log(vwprt);
-            if (vprt.width < 600) {
-                console.log(vprt.width);
-                console.log(vprt.height);
-                document.getElementById('wrap').style.height = vprt.height;
+            if (vwprt.width < 600) {
+                console.log(vwprt.width);
+                console.log(vwprt.height);
+                document.getElementById('wrap').style.height = vwprt.height;
             }
         }, false);
         
