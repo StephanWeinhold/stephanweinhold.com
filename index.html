@@ -58,7 +58,6 @@
             bottom: 0;
             margin-top: 20px;
             padding: 20px 0;
-            position: fixed;
             text-align: center;
             width: 100%;
         }
@@ -70,6 +69,11 @@
             width: 100%;
         }
         
+        #arrow-down {
+            bottom: 0;
+            position: fixed;
+        }
+        
         #social-links a {
             border-radius: 2px;
             color: rgb(255, 255, 255);
@@ -79,6 +83,10 @@
         }
         
         @media only screen  and (min-width: 800px) {
+            footer[role=contentinfo] {
+                position: fixed;
+            }
+            
             #arrow-down {
                 display: none;
             }
