@@ -37,6 +37,12 @@
             width: 100%;
         }
         
+        @media only screen  and (max-width: 599px) {
+            main {
+                height: 220px;
+            }
+        }
+        
         main strong {
             text-transform: uppercase;
         }
@@ -70,18 +76,6 @@
             width: 100%;
         }
         
-        #arrow-down {
-            bottom: 0;
-            position: fixed;
-            text-align: center;
-            width: 100%;
-        }
-        
-        #arrow-down a {
-            color: rgb(150, 150, 150);
-            font-size: 200%;
-        }
-        
         #social-links a {
             color: rgb(50, 50, 50);
             display: block;
@@ -109,10 +103,6 @@
             #social-links {
                 margin-left: 0;
                 text-align: center;
-            }
-            
-            #arrow-down {
-                display: none;
             }
             
             #social-links a {
@@ -171,12 +161,6 @@
     </div>
     
     <footer id="footer" role="contentinfo">
-        <div id="arrow-down">
-            <a href="#social-links">
-                <i class="fa fa-arrow-circle-o-down"></i>
-            </a>
-        </div>
-        
         <div id="social-links">
             <a id="soc_linkedin" href="https://www.linkedin.com/in/stephanweinhold" title="LinkedIn" target="_blank"><span class="soc_icon"><i class="fa fa-linkedin"></i></span><span class="soc_info">LinkedIn</span></span></a><a id="soc_xing" href="https://www.xing.com/profile/Stephan_Weinhold" title="Xing" target="_blank"><span class="soc_icon"><i class="fa fa-xing"></i></span><span class="soc_info">XING</span></span></a><a id="soc_twitter" href="https://twitter.com/TheAgileNinja" title="Twitter" target="_blank"><span class="soc_icon"><i class="fa fa-twitter"></i></span><span class="soc_info">Twitter</span></span></a><a id="soc_stackoverflow" href="http://stackoverflow.com/users/3218828/stephan-weinhold" title="stackoverflow" target="_blank"><span class="soc_icon"><i class="fa fa-stack-overflow"></i></span><span class="soc_info">stackoverflow</span></span></a><a id="soc_github" href="https://github.com/StephanWeinhold" title="GitHub" target="_blank"><span class="soc_icon"><i class="fa fa-github"></i></span><span class="soc_info">GitHub</span></span></a><a id="soc_instagram" href="https://www.instagram.com/stephanweinhold/" title="Instagram" target="_blank"><span class="soc_icon"><i class="fa fa-instagram"></i></span><span class="soc_info">Instagram</span></span></a><a id="soc_pinterest" href="https://www.pinterest.com/stephanweinhold/" title="Pinterest" target="_blank"><span class="soc_icon"><i class="fa fa-pinterest"></i></span><span class="soc_info">Pinterest</span></span></a><a id="soc_pmi" href="http://www.pmi.org" title="Project Management Institute" target="_blank"><span class="soc_icon"><i class="fa fa-globe"></i></span><span class="soc_info">PMI</span></a>
         </div>
@@ -197,30 +181,9 @@
             document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
             document.getElementById('me').style.color = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         }
-        
-        var getViewportSize = function() {
-            var wndw = window,
-                dcmnt = document,
-                elmnt = dcmnt.documentElement,
-                bdy = dcmnt.getElementsByTagName('body')[0],
-                hght = wndw.innerHeight|| elmnt.clientHeight|| bdy.clientHeight,
-                wdth = wndw.innerWidth || elmnt.clientWidth || bdy.clientWidth,
-                vwprt = {
-                    'width': wdth,
-                    'height': hght
-                };
-            
-            return vwprt;
-        }
     
         window.onload = function() {
             colorByDate();
-            
-            var vwprt = getViewportSize(),
-                mnHght = vwprt.height - document.getElementById('header').offsetHeight;
-            if (vwprt.width < 600) {
-                document.getElementById('wrap').style.height = mnHght + 'px';
-            }
         };
         
         (function(s,t,e,p,h,a,n){s['GoogleAnalyticsObject']=h;s[h]=s[h]||function(){
