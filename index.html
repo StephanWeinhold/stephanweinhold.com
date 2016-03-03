@@ -217,7 +217,7 @@
             colorByDate();
             
             var vwprt = getViewportSize(),
-                mnHght = vwprt.height - document.getElementById('header').height;
+                mnHght = vwprt.height - document.getElementById('header').outerHeight;
             if (vwprt.width < 600) {
                 document.getElementById('wrap').style.height = mnHght + 'px';
             }
