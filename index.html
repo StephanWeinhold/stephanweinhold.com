@@ -30,17 +30,12 @@
         }
         
         main {
+            height: 220px;
             position: absolute;
             text-align: center;
             transform: translateY(-50%);
             top: 50%;
             width: 100%;
-        }
-        
-        @media only screen and (max-width: 599px) {
-            main {
-                min-height: 220px;
-            }
         }
         
         main strong {
@@ -52,12 +47,6 @@
             font-size: 180%;
             margin: 0;
             padding: 0;
-        }
-        
-        @media only screen and (min-width: 600px) {
-            h1 {
-                font-size: 400%;
-            }
         }
         
         footer[role=contentinfo] {
@@ -96,6 +85,14 @@
         }
         
         @media only screen and (min-width: 600px) {
+            h1 {
+                font-size: 400%;
+            }
+            
+            main {
+                height: autp;
+            }
+            
             footer[role=contentinfo] {
                 position: fixed;
             }
