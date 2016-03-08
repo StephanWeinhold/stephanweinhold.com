@@ -185,9 +185,28 @@
             document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
             document.getElementById('me').style.color = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         };
+        
+        var trackOutboundLink = function(url) {
+            ga('send', 'event', 'outbound', 'click', url, {
+                'transport': 'beacon',
+                'hitCallback': function(){document.location = url;}
+            });
+        };
     
         window.onload = function() {
             colorByDate();
+            
+            var sl = document.getElementById('social-links'),
+                a = sl.getElementsByTagName('a'),
+                al = a.length;
+            
+            for (var i = 0; i < al; ++i) {
+                a[i].addEventListener('click', function(e)) {
+                    e.preventDefault();
+                    var h = this.getAttribute('href');
+                    trackOutboundLink(h);
+                }
+            }
         };
         
         (function(s,t,e,p,h,a,n){s['GoogleAnalyticsObject']=h;s[h]=s[h]||function(){
