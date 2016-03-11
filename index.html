@@ -197,11 +197,11 @@
                 al = a.length;
             
             for (var i = 0; i < al; ++i) {
-                a[i].addEventListener('click', function(e)) {
+                a[i].addEventListener('click', function(e) {
                     e.preventDefault();
                     var h = this.getAttribute('href');
                     trackOutboundLink(h);
-                }
+                });
             }
         };
         
