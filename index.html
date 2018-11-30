@@ -272,17 +272,19 @@
     </noscript>
     
     <script type="text/javascript">
-        var colorByDate = function() {
+        let $ = function(id) { return document.getElementById(id); };
+
+        let colorByDate = function() {
             var tdy = new Date(),
                 d = '1' + tdy.getDate(),
                 m = '1' + tdy.getMonth() + 1,
                 y = '1' + tdy.getFullYear().toString().substring(2);
                 
-            document.getElementById('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
-            document.getElementById('me').style.color = 'rgb(' + d + ', ' + m + ', ' + y + ')';
+            $('header').style.borderColor = 'rgb(' + d + ', ' + m + ', ' + y + ')';
+            $('me').style.color = 'rgb(' + d + ', ' + m + ', ' + y + ')';
         };
         
-        var trackOutboundLink = function(url, title) {
+        let trackOutboundLink = function(url, title) {
             ga('send', 'event', title, 'click', url, {
                 'transport': 'beacon',
                 'hitCallback': function(){document.location = url;}
@@ -292,11 +294,11 @@
         window.onload = function() {
             colorByDate();
             
-            var sl = document.getElementById('social-links'),
+            let sl = document.getElementById('social-links'),
                 a = sl.getElementsByTagName('a'),
                 al = a.length;
             
-            for (var i = 0; i < al; ++i) {
+            for (let i = 0; i < al; ++i) {
                 a[i].addEventListener('click', function(e) {
                     e.preventDefault();
                     var h = this.getAttribute('href'),
